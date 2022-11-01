@@ -1,6 +1,5 @@
 const fs = require('fs/promises');
 const express = require('express');
-app.use(express.static("public"));
 const cors = require('cors');
 const _ = require("lodash");
 const path = require("path");

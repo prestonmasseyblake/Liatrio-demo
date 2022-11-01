@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Preston's Api</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -93,7 +93,7 @@
                 </div>
 
 
-                <div class="api-container-inner mt-4">
+                <div class="api-container-inner mt-4 max-w-100">
                     <div class="api-container-header rounded-md  p-2 flex justify-between">
                         <p class="font-bold text-[#3D3F40]">RESPONSE</p>
                         <div class="fetch-container text-sm text-grey-200">
@@ -114,12 +114,12 @@
                             {
                             </p>
                             <p class="text-gray-300">
-                                "message":"my name is Preston",
+                                "message": "my name is Preston",
                                 </p>
-                                 <p class="text-[#679689]">
-                                 "funFact":"I ran my own web design business for 2 years when I started coding",
+                                 <p class="text-gray-300">
+                                 "funFact": "I ran my own web design business for 2 years when I started coding",
                                 </p>
-                                <p class="text-[#679689]">
+                                <p class="text-gray-300">
                                 "timestamp": 1667290642021,
                                 </p>
                                 
@@ -137,14 +137,7 @@
         </div>
         </div>
         <script src="" async defer>
-            const efwe = {
-                    "message": "my name is Preston", "timestamp":
-                        1667290642021
-                }
-    fetch('http://example.com/movies.json')
-        .then((response) => response.json())
-        .then((data) => console.log(data));
-
+           
         </script>
        
     </body>
@@ -174,8 +167,12 @@ p {
 .api-container-header {
     background-color: #232526;
 }
-
-
+.api-container-body-code {
+    opacity: 0.9;
+}
+.api-container-body-code:hover{
+     opacity: 1;
+}
 
 body {
   background: #000;
