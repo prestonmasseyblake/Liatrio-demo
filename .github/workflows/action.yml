@@ -9,7 +9,8 @@ jobs:
     steps: 
       - uses: actions/checkout@v2
       - name: build the docker image
-      run: docker buit -t liatro .  
+      run: | 
+        docker buit -t liatro .  
       # - name: launch the docker image 
       # run: docker run -d -p 3000:3000 --name node-app liatro 
 
