@@ -5,7 +5,18 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: run tests
-      uses: liatrio/github-actions/apprentice-action@master
+    uses: actions/checkout@v2
+      steps: 
+        run: |
+          docker buit -t liatro .
+          docker run -d -p 3000:3000 --name node-app liatro 
+
+
+
+
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: run tests
+  #     uses: liatrio/github-actions/apprentice-action@master
+  
