@@ -1,7 +1,7 @@
 name: Test
 on:
   push:
-    braches: [ main ]
+    branches: [ main ]
 
 jobs:
   build:
