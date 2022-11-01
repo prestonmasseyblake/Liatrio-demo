@@ -7,9 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps: 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: build the docker image
-        run: docker buit -t liatro .  
+        run: docker build -t liatro .  
       # - name: launch the docker image 
       # run: docker run -d -p 3000:3000 --name node-app liatro 
 
