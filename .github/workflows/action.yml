@@ -9,11 +9,11 @@ jobs:
     steps: 
       - uses: actions/checkout@v3
       - name: build the docker image
-        run: docker build -t liatro .  
+        run: docker build -t liatro_latest .  
       - name: launch the docker image 
-        run: docker run -d liatro
-      - name: run tests
-        uses: liatrio/github-actions/apprentice-action@master
+        run: docker run --net host -d -p 80:80 --name node-app liatro_latest 
+      # - name: run tests
+      #   uses: liatrio/github-actions/apprentice-action@master
 
       # run: docker run -d -p 3000:3000 --name node-app liatro 
 
