@@ -4,7 +4,7 @@ const cors = require('cors');
 const _ = require("lodash");
 const path = require("path");
 const { v4: uuid } = require("uuid");
-const port = 3000;
+const port = 80;
 const hostname = "localhost";
 const app = express();
 
