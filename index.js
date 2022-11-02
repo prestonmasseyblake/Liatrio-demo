@@ -4,7 +4,7 @@ const cors = require('cors');
 const _ = require("lodash");
 const path = require("path");
 const { v4: uuid } = require("uuid");
-const port = 80;
+const port = 3000;
 const hostname = "localhost";
 const app = express();
 
@@ -16,13 +16,6 @@ app.get("/about", function (req, res) {
 // Simple Api requesting the basic information
 
 var name = "Preston"
-app.get("/m", (req, res) => {
-    res.json({
-        "message": `my name is ${name}`,
-        "timestamp": new Date().getTime()
-});
-});
-
 const facts = ["I won a state championship in high school for Rowing",
     "My dog has survived cancer 3 times (hes a fighter!)",
     "I ran my own web design business for 2 years when I started coding",
