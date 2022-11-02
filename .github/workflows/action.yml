@@ -12,8 +12,8 @@ jobs:
         run: docker build -t liatro_latest .  
       - name: launch the docker image 
         run: docker run --net host -d -p 80:80 --name node-app liatro_latest 
-      # - name: run tests
-      #   uses: liatrio/github-actions/apprentice-action@master
+      - name: run tests
+        uses: liatrio/github-actions/apprentice-action@master
 
       # run: docker run -d -p 3000:3000 --name node-app liatro 
 
