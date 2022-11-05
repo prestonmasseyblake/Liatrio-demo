@@ -2,16 +2,15 @@ name: Test
 on:
   push:
     branches: [ main ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v3
       - name: build the docker image
-        run: docker build -t liatro_latest .  
+        run: docker build -t liatrio_latest .  
       - name: launch the docker image 
-        run: docker run --net host -d -p 80:80  liatro_latest
+        run: docker run --net host -d -p 80:80  liatrio_latest
       - name: run tests
         uses: liatrio/github-actions/apprentice-action@master
       - name: Login to Docker Hub 
@@ -24,10 +23,10 @@ jobs:
         with:
           context: .
           push: true
-          tags: prestonmblake/liatro:latest, prestonmblake/liatro:${{github.run_number}}
+          tags: prestonmblake/liatrio:latest, prestonmblake/liatrio:${{github.run_number}}
 
 
-      # run: docker run -d -p 3000:3000 --name node-app liatro 
+# run: docker run -d -p 3000:3000 --name node-app liatrio 
 
 
 
