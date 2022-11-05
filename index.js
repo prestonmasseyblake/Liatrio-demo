@@ -6,7 +6,7 @@ const path = require("path");
 const { v4: uuid } = require("uuid");
 const port = 80;
 const app = express();
-
+app.use(express.static(__dirname + "/public"));
 app.get("/about", function (req, res) {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
@@ -15,11 +15,11 @@ app.get("/about", function (req, res) {
 
 var name = "Preston";
 const facts = [
-  "I won a state championship in high school for Rowing",
+  "I won a state championship in high school for rowing",
   "My dog has survived cancer 3 times (hes a fighter!)",
   "I ran a web design business for 2 years with some friends.",
   "I once shaved my eyebrow for a dare and it did not grow back for a year",
-  "I am a Portugese citizen as well as a citizen in America",
+  "I am a Portugese citizen as well as a American citizen.",
 ];
 app.get("/", (req, res) => {
   let temp_rand = Math.random();
