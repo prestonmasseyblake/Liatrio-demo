@@ -6,8 +6,9 @@ const path = require("path");
 const { v4: uuid } = require("uuid");
 const port = 80;
 const app = express();
+app.use(cors());
 app.use(express.static(__dirname));
-
+app.options("*", cors());
 
 
 // Simple Api requesting the basic information
