@@ -1,6 +1,6 @@
 FROM node:16
 WORKDIR /liatrio 
-COPY package.json index.js index.html /public ./
+COPY package.json index.js about.html index.css functionality.js ./
 RUN npm install 
 EXPOSE 80
 CMD ["npm","start"]  

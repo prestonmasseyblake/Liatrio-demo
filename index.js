@@ -6,10 +6,9 @@ const path = require("path");
 const { v4: uuid } = require("uuid");
 const port = 80;
 const app = express();
-app.use(express.static(__dirname + "/public"));
-app.get("/about", function (req, res) {
-  res.sendFile(path.join(__dirname + "/index.html"));
-});
+app.use(express.static(__dirname));
+
+
 
 // Simple Api requesting the basic information
 
@@ -29,6 +28,11 @@ app.get("/", (req, res) => {
     funFact: facts[idx],
     timestamp: new Date().getTime(),
   });
+});
+
+
+app.get("/about", function (req, res) {
+  res.sendFile(path.join(__dirname + "/about.html"));
 });
 
 app.listen(port);
